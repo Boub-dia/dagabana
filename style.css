@@ -1,0 +1,42 @@
+
+:root {
+  --royal-blue: #4169e1;
+  --gold: #ffd700;
+  --white: #ffffff;
+  --light: #f8f8f8;
+  --max-width: 1000px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--royal-blue); color: var(--white); line-height: 1.6; }
+.container { max-width: var(--max-width); margin: auto; padding: 20px; }
+
+header { background: rgba(0,0,50,0.5); position: fixed; width: 100%; top: 0; left: 0; z-index: 100; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+.logo img { height: 50px; border-radius: 6px; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: var(--white); text-decoration: none; padding: 6px 10px; border-radius: 5px; }
+nav a:hover { background: var(--gold); color: var(--royal-blue); }
+
+.hero { background: url('images/hero.jpg') center/cover no-repeat; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-inner { background: rgba(0, 0, 50, 0.5); padding: 30px; border-radius: 12px; animation: fadeIn 2s ease-in; }
+.title {
+    font-size: 32px; 
+    color: var(--gold);
+    font-weight: 800; 
+    animation: slideRight 1.5s ease-out; }
+.slogan { margin-top: 10px; font-size: 16px; color: var(--white); }
+
+@keyframes slideRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.main { padding: 100px 20px 40px; }
+h1, h2, h3 { color: var(--gold); }
+.card { background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; margin: 10px 0; }
+.footer { text-align: center; padding: 20px; background: rgba(0, 0, 50, 0.3); color: var(--light); margin-top: 40px; }
+
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px;
+  border: none; background: rgba(255, 255, 255, 0.2); color: var(--white);
+}
+.btn { background: var(--gold); color: var(--royal-blue); padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.btn:hover { background: var(--white); color: var(--royal-blue); }
